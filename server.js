@@ -1,17 +1,19 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 3000
-const mongoose = require('mongoose')
-const Cat = require('./models/catModel')
-const bodyParser = require('body-parser')
+const express = require('express');
 
-mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/CatLadyApi')
+const app = express();
+const port = process.env.PORT || 3000;
+const mongoose = require('mongoose');
+const Cat = require('./models/catModel');
+const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/CatLadyApi');
 
-const routes = require('./routes')
-routes(app)
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.listen(port)
+const routes = require('./routes');
+
+routes(app);
+
+app.listen(port);
