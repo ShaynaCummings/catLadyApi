@@ -1,5 +1,5 @@
 {
-  "name": "crazy-cat-lady-api",
+  "name": "cat-lady-api",
   "version": "1.0.0",
   "description": "simple node/express api for your cat management needs",
   "main": "index.js",
